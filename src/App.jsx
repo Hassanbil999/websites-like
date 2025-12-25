@@ -12,7 +12,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/search/: query" element={<Results />} />
+          <Route path="/search/:query" element={<Results />} />
         </Routes>
       </div>
     </Router>
