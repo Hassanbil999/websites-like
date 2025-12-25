@@ -1,0 +1,222 @@
+.home {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  padding-top: 80px;
+}
+
+.home-container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.hero-section {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.hero-title-script {
+  font-size: 2.5rem;
+  font-weight: 400;
+  font-style: italic;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 1rem;
+  animation: gradient-shift 3s ease infinite;
+  background-size: 200% 200%;
+}
+
+.hero-title {
+  font-size: 5rem;
+  font-weight:  800;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  color: var(--text);
+}
+
+.hero-title-gradient {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  background-size: 200% 200%;
+  animation: gradient-shift 3s ease infinite;
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  color: var(--text-secondary);
+  margin-bottom: 3rem;
+  line-height: 1.6;
+}
+
+.search-form {
+  margin-bottom: 3rem;
+}
+
+.search-container {
+  max-width: 700px;
+  margin: 0 auto;
+  background: rgba(26, 31, 58, 0.6);
+  border:  1px solid rgba(0, 217, 255, 0.2);
+  border-radius: 24px;
+  padding: 1.5rem 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  backdrop-filter: blur(20px);
+  transition: all 0.3s ease;
+  animation: breathe 4s ease-in-out infinite;
+}
+
+.search-container:focus-within {
+  border-color: var(--primary);
+  box-shadow: var(--glow-cyan);
+  animation: none;
+  transform: scale(1.02);
+}
+
+.search-input-wrapper {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.search-prefix {
+  font-size: 1.5rem;
+  color: var(--text-secondary);
+  white-space: nowrap;
+}
+
+.search-input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 1.5rem;
+  color: var(--text);
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.search-input::placeholder {
+  color: var(--text-secondary);
+  opacity: 0.5;
+}
+
+.voice-button {
+  background: transparent;
+  border: none;
+  color: var(--text-secondary);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  padding: 0.5rem;
+}
+
+.voice-button:hover {
+  color: var(--primary);
+  transform: scale(1.1);
+}
+
+.search-button {
+  background: var(--gradient-1);
+  border: none;
+  width: 56px;
+  height: 56px;
+  border-radius:  50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: var(--background);
+  box-shadow: var(--glow-cyan);
+}
+
+.search-button:hover {
+  transform: scale(1.1) rotate(90deg);
+  box-shadow: 0 0 30px rgba(0, 217, 255, 0.6);
+}
+
+.recently-explored {
+  text-align: center;
+}
+
+.recently-title {
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+}
+
+.recent-searches {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.recent-search-item {
+  background: transparent;
+  border: none;
+  color: var(--text-secondary);
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+  font-family: 'Space Grotesk', sans-serif;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+}
+
+.recent-search-item:hover {
+  color: var(--primary);
+  background: rgba(0, 217, 255, 0.1);
+}
+
+.recent-dot {
+  width: 6px;
+  height: 6px;
+  background: var(--primary);
+  border-radius: 50%;
+  opacity: 0.5;
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 3rem;
+  }
+  
+  .hero-title-script {
+    font-size: 1.5rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+  
+  .search-container {
+    padding: 1rem 1.5rem;
+  }
+  
+  .search-prefix,
+  .search-input {
+    font-size: 1.125rem;
+  }
+  
+  .recent-searches {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
