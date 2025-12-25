@@ -1,0 +1,115 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  background: rgba(26, 31, 58, 0.8);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(0, 217, 255, 0.1);
+  z-index: 1000;
+}
+
+.navbar-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  height: 100%;
+  display:  flex;
+  align-items:  center;
+  justify-content:  space-between;
+  padding: 0 2rem;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  font-size: 1.25rem;
+  font-weight:  600;
+  color: var(--text);
+  transition: all 0.3s ease;
+}
+
+.logo-dot {
+  width: 10px;
+  height: 10px;
+  background: var(--primary);
+  border-radius: 50%;
+  box-shadow: var(--glow-cyan);
+  animation: glow-pulse 2s ease-in-out infinite;
+}
+
+.logo-text {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.navbar-menu {
+  display: flex;
+  align-items: center;
+  gap:  2rem;
+}
+
+. navbar-link {
+  color:  var(--text-secondary);
+  text-decoration:  none;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.navbar-link::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--primary);
+  transition: width 0.3s ease;
+}
+
+.navbar-link:hover {
+  color: var(--text);
+}
+
+.navbar-link:hover::after {
+  width: 100%;
+}
+
+. navbar-button {
+  background:  var(--gradient-1);
+  color: var(--background);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 12px;
+  font-size:  1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.navbar-button:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--glow-cyan);
+}
+
+@media (max-width: 768px) {
+  .navbar-menu {
+    gap: 1rem;
+  }
+  
+  .navbar-link {
+    font-size: 0.9rem;
+  }
+  
+  .navbar-button {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+}
